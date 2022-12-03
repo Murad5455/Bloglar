@@ -1,0 +1,27 @@
+﻿@model Travel_Trip_Proje3.Models.Sinifler2.BLOG
+
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni blog elve et</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.BASLIG)
+    @Html.TextBoxFor(x => x.BASLIG, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.TARIX)
+    @Html.TextBoxFor(x => x.TARIX, new { @class = "form-control" })
+  
+    @Html.LabelFor(x => x.BLOGIMAGE)
+        @Html.TextBoxFor(x => x.BLOGIMAGE, new { @class = "form-control" }) 
+   
+    @Html.LabelFor(x => x.ACIQLAMA)
+    @Html.TextAreaFor(x => x.ACIQLAMA, new { @class = "form-control" })
+
+<br />
+    <button class="btn btn-primary">Blog elave et</button>
+   
+</form>

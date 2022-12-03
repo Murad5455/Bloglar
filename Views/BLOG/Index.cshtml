@@ -1,0 +1,95 @@
+﻿@model Travel_Trip_Proje3.Models.Sinifler2.BlogYorum
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Test.cshtml";
+}
+
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link href="~/web3/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web3/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <!---->
+
+</head>
+<body>
+    <!---header---->
+
+
+
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                @foreach (var x in Model.deneme1)
+                {
+                    <div class="single-grid">
+                        <img src="@x.BLOGIMAGE" alt="" />
+                        <a href="/BLOG/BlogDetay/@x.ID">@x.BASLIG</a>
+                        <br />
+
+
+
+
+                        <p>
+                            @x.ACIQLAMA
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+
+
+                }
+            </div>
+
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>SON BLOGLAR</h3>
+                   @foreach (var W in Model.deneme3)
+                   {
+                    <ul>
+                        <li><a href="/BLOG/BlogDetay/@W.ID">@W.BASLIG</a></li>
+                      
+                    </ul>}
+                </div>
+                <div class="comments">
+                    <h3>SON REYLER</h3>
+                    <ul>
+                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    <!---->
+    <div class="footer">
+        <div class="container">
+            <p>
+                Copyrights © 2015 Blog All rights reserved | Template by
+                <a href="http://w3layouts.com/">W3layouts</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

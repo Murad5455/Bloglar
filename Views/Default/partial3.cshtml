@@ -1,0 +1,12 @@
+﻿@using Travel_Trip_Proje3.Models.Sinifler2
+@model List<BLOG>
+   <div class="padding">
+    <h4>En cox baxilan 10 blog</h4>
+    @{int i=0;}
+    @foreach (var w in Model)
+    {<ul class="list list-pad">
+            <li class="list-bg"><span>@{i++;} @i.</span><a href="/BLOG/Blogdetay/@w.ID">@w.BASLIG</a></li>
+
+        </ul>}
+    <a href="/BLOG/Index/" class="link1">Butun bloglar</a>
+</div>

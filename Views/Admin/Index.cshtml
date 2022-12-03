@@ -1,0 +1,32 @@
+﻿@using Travel_Trip_Proje3.Models.Sinifler2
+@model List <BLOG>     
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog listesi</h2>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BASLIG</th>
+        <th>SIL</th>
+        <th>GUNCELLE</th>
+        <th>DETAYLAR</th>
+    </tr>
+    @foreach (var w in Model)
+    {
+        <tr>
+
+            <th>@w.ID</th>
+            <th>@w.BASLIG</th>
+            <th><a href="/Admin/Sil/@w.ID/"class="btn btn-danger">SIL</a></th>
+            <th><a href="/Admin/BlogGetir/@w.ID"class="btn btn-warning">GUNCELLE</a></th>
+            <th><a href="#"class="btn btn-default">DETAYLAR</a></th>
+         
+        </tr>}
+    </table>
+<a href="/Admin/YeniBlog/"class="btn btn-primary">YENI BLOG</a>
+
